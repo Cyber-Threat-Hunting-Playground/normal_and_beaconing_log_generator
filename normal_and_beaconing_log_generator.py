@@ -25,6 +25,7 @@ NAT_POOL = [
 
 # Benign recurring destinations (Office365, Teams, Windows Update, browsers)
 NOISE_DOMAINS = [
+    # Existing
     ("ecs.office.com", "HTTPS"),
     ("login.microsoftonline.com", "HTTPS"),
     ("outlook.office.com", "HTTPS"),
@@ -34,7 +35,38 @@ NOISE_DOMAINS = [
     ("api.github.com", "HTTPS"),
     ("api.dropbox.com", "HTTPS"),
     ("www.bing.com", "HTTPS"),
-    ("www.google.com", "HTTPS")
+    ("www.google.com", "HTTPS"),
+
+    # Browsing / Search
+    ("www.yahoo.com", "HTTPS"),
+    ("duckduckgo.com", "HTTPS"),
+    ("www.wikipedia.org", "HTTPS"),
+    ("www.reddit.com", "HTTPS"),
+    ("stackoverflow.com", "HTTPS"),
+    ("news.google.com", "HTTPS"),
+
+    # CDNs / Advertisements / Analytics
+    ("cdnjs.cloudflare.com", "HTTPS"),
+    ("cdn.jsdelivr.net", "HTTPS"),
+    ("fonts.googleapis.com", "HTTPS"),
+    ("www.googletagmanager.com", "HTTPS"),
+    ("www.google-analytics.com", "HTTPS"),
+
+    # Popular services
+    ("www.youtube.com", "HTTPS"),
+    ("open.spotify.com", "HTTPS"),
+    ("slack.com", "HTTPS"),
+
+    # Windows OS background
+    ("win11.settings.data.microsoft.com", "HTTPS"),
+    ("v10.events.data.microsoft.com", "HTTPS"),
+    ("dl.delivery.mp.microsoft.com", "HTTPS"),
+    ("time.windows.com", "NTP"),
+
+    # Developer platforms
+    ("pypi.org", "HTTPS"),
+    ("registry.npmjs.org", "HTTPS"),
+    ("registry-1.docker.io", "HTTPS")
 ]
 
 # Slightly more periodic but still benign stream (e.g. telemetry)
