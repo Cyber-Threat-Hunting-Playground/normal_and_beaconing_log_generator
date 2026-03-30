@@ -1,0 +1,2 @@
+# This project uses only the Python standard library (csv, random, datetime).
+# No third-party packages are required. Use Python 3.6+.
